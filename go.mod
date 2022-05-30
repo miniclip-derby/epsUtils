@@ -1,3 +1,3 @@
-module github.com/epsUtils
+module github.com/miniclip-derby/epsUtils
 
 go 1.18
