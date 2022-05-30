@@ -1,1 +1,1 @@
-package epsslice
+package epsSlice

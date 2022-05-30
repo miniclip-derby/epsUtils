@@ -1,4 +1,4 @@
-package epsslice
+package epsSlice
 
 import (
 	"testing"

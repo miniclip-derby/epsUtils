@@ -1,4 +1,4 @@
-package epsslice
+package epsSlice
 
 // String is a slice of strings //////////////////////////////////////////////
 type String []string

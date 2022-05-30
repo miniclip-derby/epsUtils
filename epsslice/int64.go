@@ -1,4 +1,4 @@
-package epsslice
+package epsSlice
 
 import "github.com/miniclip-derby/epsUtils/epsInt64"
 

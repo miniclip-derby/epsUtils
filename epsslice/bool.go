@@ -1,4 +1,4 @@
-package epsslice
+package epsSlice
 
 // Bool is a slice of bools
 type Bool []bool
