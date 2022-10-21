@@ -90,6 +90,17 @@ func RandRange(min float32, max float32) float32 {
 	return Rand(max-min) + min
 }
 
+// RandRangeSafe returns a random number between [min and max)
+func RandRangeSafe(min float32, max float32) float32 {
+	if min == max {
+		return min
+	}
+	if min > max {
+		min, max = max, min
+	}
+	return Rand(max-min) + min
+}
+
 ///////////////////////////////////////////////////////////////////////////////////
 // String functions
 
