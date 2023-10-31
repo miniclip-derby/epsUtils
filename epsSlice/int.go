@@ -87,16 +87,16 @@ func (g *Int) Pop() (int, error) {
 func (g Int) Compare(g2 Int) int {
 
 	if len(g) < len(g2) {
-		return -epsInt.Abs(g2[len(g)])
+		return -epsInt.Sign(g2[len(g)])
 	}
 	if len(g2) < len(g) {
-		return epsInt.Abs(g[len(g2)])
+		return epsInt.Sign(g[len(g2)])
 	}
 
 	for i := range g {
 		v := g[i] - g2[i]
 		if v != 0 {
-			return epsInt.Abs(v)
+			return epsInt.Sign(v)
 		}
 	}
 	return 0

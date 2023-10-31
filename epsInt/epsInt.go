@@ -39,23 +39,40 @@ func ToMoney(i int) string {
 	return fmt.Sprintf("£%v.%02d", pounds, pence)
 }
 
+//	func int32Bucket(value int, bucket int) int {
+//		return value - (value % bucket)
+//	}
 //
-// func int32Bucket(value int, bucket int) int {
-// 	return value - (value % bucket)
-// }
-//
-// func intBucket(value int64, bucket int64) int64 {
-// 	return value - (value % bucket)
-// }
+//	func intBucket(value int64, bucket int64) int64 {
+//		return value - (value % bucket)
+//	}
 //
 // Abs returns the abs of v
-func Abs(v int) int {
+func Abs_deprecated(v int) int {
 	if v < 0 {
 		return -1
 	} else if v > 0 {
 		return 1
 	}
 	return 0
+}
+
+// Sign returns the sign of v
+func Sign(v int) int {
+	if v < 0 {
+		return -1
+	} else if v > 0 {
+		return 1
+	}
+	return 0
+}
+
+// Abs2 returns the abs of v
+func Abs2(v int) int {
+	if v < 0 {
+		return -v
+	}
+	return v
 }
 
 // Min returns min of v1 and v2
