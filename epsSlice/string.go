@@ -1,5 +1,7 @@
 package epsSlice
 
+import "fmt"
+
 // String is a slice of strings //////////////////////////////////////////////
 type String []string
 
@@ -79,4 +81,14 @@ func (g String) ElementClampPanic(i int) string {
 	}
 
 	return g[i]
+}
+
+// Pop removes and returns the last element
+func (g *String) Pop() (string, error) {
+	if len(*g) == 0 {
+		return "", fmt.Errorf("Can't pop empty slice")
+	}
+	var x string
+	x, *g = (*g)[len(*g)-1], (*g)[:len(*g)-1]
+	return x, nil
 }
